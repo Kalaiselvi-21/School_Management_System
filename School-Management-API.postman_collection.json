@@ -1,0 +1,47 @@
+{
+  "info": {
+    "name": "School Management System API",
+    "_postman_id": "12345678-90ab-cdef-1234-567890abcdef",
+    "description": "Postman collection for School Management System APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add School",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"New Test School\",\n    \"address\": \"123 Test Street, City\",\n    \"latitude\": 12.95,\n    \"longitude\": 77.55\n}"
+        },
+        "url": {
+          "raw": "https://school-management-system-1-dx8g.onrender.com/addSchool",
+          "protocol": "https",
+          "host": ["school-management-system-1-dx8g","onrender","com"],
+          "path": ["addSchool"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Schools",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://school-management-system-1-dx8g.onrender.com/listSchools?lat=12.97&lng=77.59",
+          "protocol": "https",
+          "host": ["school-management-system-1-dx8g","onrender","com"],
+          "path": ["listSchools"],
+          "query": [
+            { "key": "lat", "value": "12.97" },
+            { "key": "lng", "value": "77.59" }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
